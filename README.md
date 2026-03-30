@@ -34,3 +34,13 @@ install-addsforest
     - Account, Access Work School, Connect, Join Domain
     (add-computer -domainName runge.str -credential runge.str\Administrator -force -Restart)
 
+
+* Crear session PSSession
+```shell
+ $dc=New-PSSession 192.168.79.155 -Credential (Get-Credential)
+ Enter-PSSession 3
+ ```
+ 
+ # mandar a la otra session
+
+  cp .\ad_schema.json -ToSession $dc C:/Windows/Tasks

@@ -1,0 +1,32 @@
+{
+    "domain": "runge.str",
+    "groups": [
+        {
+            "name": "HelpDesk"
+        }
+    ],
+
+    "users": [
+        {
+            "name": "John Hammond",
+            "password": "nothing",
+            "groups": [
+                "HelpDesk"
+            ]
+        },
+        {
+            "name": "Adrian Alexd",
+            "password": "nothingP@ss",
+            "groups": [
+                "HelpDesk"
+            ]
+        },
+        {
+            "name": "Alexandra Ula",
+            "password": "n0thingP@ss",
+            "groups": [
+                "HelpDesk"
+            ]
+        }
+    ]
+}
