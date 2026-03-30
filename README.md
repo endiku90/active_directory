@@ -10,3 +10,9 @@
 ```shell
 Install-WindowsFeatureAD-Domain-Services -IncludeManagementTools
 ```
+
+3. Setting Mgmt WS01
+- Install chocolatey
+- install git & vscode
+
+
