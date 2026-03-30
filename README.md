@@ -3,7 +3,7 @@
 1. User `sconfig` to:
     - Change hostname
     - Change IP Address to static
-    - Change the DNS server to our own IP Address
+    - Change the DNS server to our own IP Address (it is set to loopback address per default)
 
     (Manually https://itluke.online/2018/04/27/how-to-change-a-static-ip-address-with-powershell/)
 
@@ -24,4 +24,13 @@ install-addsforest
     - set-item wsman:\\localhost\Client\TrustedHosts -value 192.168.79.155
     - New-PSSession -ComputerName 192.168.79.155 -Credential (get-credential)
     - Enter-PSSession 1
+
+5. Add WS01 to domain
+    - Set dns server (to domain)
+    ```shell
+    Get-DnsClientServerAddress (take interface index)
+    Set-DnsClientServerAddress -InterfaceIndex 4 -ServerAddresses 192.168.79.155
+    ```
+    - Account, Access Work School, Connect, Join Domain
+    (add-computer -domainName runge.str -credential runge.str\Administrator -force -Restart)
 
